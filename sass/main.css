@@ -11,11 +11,12 @@ body {
   align-items: center;
   justify-content: center;
   height: 70vh;
+  background-color: hsl(218deg, 23%, 16%);
 }
 body .main {
   background-color: hsl(217deg, 19%, 24%);
   margin: 0 1rem;
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.5rem 0rem 1.5rem;
   text-align: center;
 }
 body .main .main__heading {
@@ -44,6 +45,8 @@ body .main .main__diceContainer {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  position: relative;
+  top: 25px;
 }
 body .main .main__diceContainer .dice {
   width: 22px;
