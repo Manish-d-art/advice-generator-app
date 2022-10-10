@@ -43,7 +43,7 @@ body .main .divider1 {
   width: 100%;
 }
 body .main .main__diceContainer {
-  display: block;
+  all: unset;
   width: 60px;
   height: 60px;
   background-color: hsl(150deg, 100%, 66%);

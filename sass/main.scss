@@ -56,7 +56,7 @@ body{
     }
 
     .main__diceContainer{
-      display: block;
+      all: unset;
       width:60px;
       height:60px;
       background-color: $NeonGreen;
