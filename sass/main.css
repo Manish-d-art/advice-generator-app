@@ -7,9 +7,16 @@
 
 body {
   font-family: "Manrope", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
 }
 body .main {
   background-color: hsl(217deg, 19%, 24%);
+  margin: 0 1rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
 }
 body .main .main__heading {
   color: hsl(150deg, 100%, 66%);
@@ -18,5 +25,8 @@ body .main .main__heading {
   letter-spacing: 3px;
   font-weight: 100 !important;
   width: 100%;
-  text-align: center;
+}
+body .main .main__adviceText {
+  color: hsl(193deg, 38%, 86%);
+  font-size: 1.5rem;
 }/*# sourceMappingURL=main.css.map */

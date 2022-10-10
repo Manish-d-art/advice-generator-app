@@ -18,9 +18,16 @@ $DarkBlue: hsl(218, 23%, 16%);
 
 body{
   font-family: 'Manrope', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
 
   .main{
     background-color: $DarkGrayishBlue;
+    margin:0 1rem ;
+    padding: 2rem 1.5rem;
+    text-align: center;
 
     .main__heading{
       color: $NeonGreen;
@@ -29,7 +36,11 @@ body{
       letter-spacing: 3px;
       font-weight: 100 !important;
       width: 100%;
-      text-align: center;
+    }
+
+    .main__adviceText{
+      color: $LightCyan;
+      font-size: 1.5rem;
     }
   }
 }
