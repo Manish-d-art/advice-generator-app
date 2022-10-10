@@ -32,6 +32,11 @@ body{
     border-radius: 10px;
     width: min(93%, 350px);
 
+    @media (min-width:992px) {
+    width: min(93%, 456px) !important ;
+      
+    }
+
     .main__heading{
       color: $NeonGreen;
       font-size: .6rem;

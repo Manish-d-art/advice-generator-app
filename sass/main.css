@@ -21,6 +21,11 @@ body .main {
   border-radius: 10px;
   width: min(93%, 350px);
 }
+@media (min-width: 992px) {
+  body .main {
+    width: min(93%, 456px) !important;
+  }
+}
 body .main .main__heading {
   color: hsl(150deg, 100%, 66%);
   font-size: 0.6rem;
