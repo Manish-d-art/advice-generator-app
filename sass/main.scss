@@ -41,6 +41,27 @@ body{
     .main__adviceText{
       color: $LightCyan;
       font-size: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .divider1{
+      width: 100%;
+    }
+
+    .main__diceContainer{
+      display: block;
+      width:60px;
+      height:60px;
+      background-color: $NeonGreen;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      
+
+      .dice{
+       width: 22px;
+      }
     }
   }
 }
