@@ -5,12 +5,16 @@ const advicePara=document.querySelector('.main__adviceText');
 const bodyy=document.getElementsByTagName("BODY")[0];
 const main=document.querySelector('.main');
 const footer=document.querySelector('.footer');
-const renderError=document.querySelector('.renderError');
+const errorContainer=document.querySelector('.renderError');
+
+const ErrorFunc=function (msg){
+  errorContainer.insertAdjacentText('beforeend',msg);
+};
 
 const adviceFunc=function(){
   fetch('https://api.adviceslip.com/advice')
   .then(response => {
-    if(! response.ok)
+    if(!response.ok)
       throw new Error(`advice not found(${response.status})`);
     return response.json();
   })
@@ -19,15 +23,13 @@ const adviceFunc=function(){
     const id=data.slip.id;
     let adviceText=data.slip.advice;
     advicePara.textContent=adviceText;
-    console.log(adviceText);
-    console.log(id);
     adviceId.textContent=id;
   })
   .catch(err =>{
-    console.log(err.message);
     bodyy.style.backgroundColor="white";
     main.classList.toggle('hidden');
     footer.classList.toggle('hidden');
+    ErrorFunc(`Something went wrong 🥲🥲🥲 (${err.message}).Try Again!`);
   });
 }
 
