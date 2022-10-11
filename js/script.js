@@ -19,7 +19,7 @@ const adviceFunc=function(){
     return response.json();
   })
   .then(data =>{
-    console.log(data);
+    // console.log(data);
     const id=data.slip.id;
     let adviceText=data.slip.advice;
     advicePara.textContent=adviceText;
