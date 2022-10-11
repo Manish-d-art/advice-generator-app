@@ -64,6 +64,7 @@ body .main .main__diceContainer .dice {
 }
 body .footer .renderError {
   color: red;
+  font-size: 1.5rem;
 }
 
 .hidden {
