@@ -3,6 +3,9 @@ const Btn=document.querySelector('.main__diceContainer');
 const adviceId=document.querySelector('.main__advice-no');
 const advicePara=document.querySelector('.main__adviceText');
 const bodyy=document.getElementsByTagName("BODY")[0];
+const main=document.querySelector('.main');
+const footer=document.querySelector('.footer');
+const renderError=document.querySelector('.renderError');
 
 const adviceFunc=function(){
   fetch('https://api.adviceslip.com/advice')
@@ -23,6 +26,8 @@ const adviceFunc=function(){
   .catch(err =>{
     console.log(err.message);
     bodyy.style.backgroundColor="white";
+    main.classList.toggle('hidden');
+    footer.classList.toggle('hidden');
   });
 }
 
