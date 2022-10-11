@@ -11,9 +11,9 @@ body {
   align-items: center;
   justify-content: center;
   height: 90vh;
-  background-color: hsl(218deg, 23%, 16%);
 }
 body .main {
+  display: none;
   background-color: hsl(217deg, 19%, 24%);
   margin: 0 1rem;
   padding: 2.5rem 1.5rem 0rem 1.5rem;
@@ -61,4 +61,11 @@ body .main .main__diceContainer:hover {
 }
 body .main .main__diceContainer .dice {
   width: 22px;
+}
+body .footer .renderError {
+  color: red;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
