@@ -2,6 +2,7 @@
 const Btn=document.querySelector('.main__diceContainer');
 const adviceId=document.querySelector('.main__advice-no');
 const advicePara=document.querySelector('.main__adviceText');
+const bodyy=document.getElementsByTagName("BODY")[0];
 
 const adviceFunc=function(){
   fetch('https://api.adviceslip.com/advice')
@@ -19,8 +20,9 @@ const adviceFunc=function(){
     console.log(id);
     adviceId.textContent=id;
   })
-  .catch(error =>{
-    console.log(2);
+  .catch(err =>{
+    console.log(err.message);
+    bodyy.style.backgroundColor="white";
   });
 }
 
