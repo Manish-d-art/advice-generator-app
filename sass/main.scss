@@ -34,7 +34,7 @@ body{
     width: min(93%, 350px);
 
     @media (min-width:992px) {
-    width: min(93%, 456px) !important ;
+    width: min(93%, 480px) !important ;
       
     }
 
@@ -45,12 +45,18 @@ body{
       letter-spacing: 3px;
       font-weight: 100 !important;
       width: 100%;
+      @media (min-width:992px) {
+      font-size: .77rem !important;
+      }
     }
 
     .main__adviceText{
       color: $LightCyan;
       font-size: 1.5rem;
       margin: 1.5rem 0;
+      @media (min-width:992px) {
+      font-size: 1.8rem;
+      }
     }
     .divider1{
       width: 100%;

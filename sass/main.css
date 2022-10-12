@@ -24,7 +24,7 @@ body .main {
 }
 @media (min-width: 992px) {
   body .main {
-    width: min(93%, 456px) !important;
+    width: min(93%, 480px) !important;
   }
 }
 body .main .main__heading {
@@ -35,10 +35,20 @@ body .main .main__heading {
   font-weight: 100 !important;
   width: 100%;
 }
+@media (min-width: 992px) {
+  body .main .main__heading {
+    font-size: 0.77rem !important;
+  }
+}
 body .main .main__adviceText {
   color: hsl(193deg, 38%, 86%);
   font-size: 1.5rem;
   margin: 1.5rem 0;
+}
+@media (min-width: 992px) {
+  body .main .main__adviceText {
+    font-size: 1.8rem;
+  }
 }
 body .main .divider1 {
   width: 100%;
