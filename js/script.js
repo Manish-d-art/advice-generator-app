@@ -35,6 +35,17 @@ const ErrorFunc=function (msg){
 
 const adviceFunc=async function(){
   const adv = await fetch('https://api.adviceslip.com/advice');
+  if(!adv.ok) 
+    throw new error(`advice not found(${response.status})`)
+
+  const advData = await adv.json();
+  console.log(advData);
+  const id = advData.slip.id;
+  const adviceText=advData.slip.advice;
+  console.log(id);
+  console.log(adviceText);
+  advicePara.textContent=adviceText;
+  adviceId.textContent=id;
 }
 
 Btn.addEventListener('click',adviceFunc);
