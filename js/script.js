@@ -11,28 +11,31 @@ const ErrorFunc=function (msg){
   errorContainer.insertAdjacentText('beforeend',msg);
 };
 
-const adviceFunc=function(){
-  fetch('https://api.adviceslip.com/advice')
-  .then(response => {
-    if(!response.ok)
-      throw new Error(`advice not found(${response.status})`);
-    return response.json();
-  })
-  .then(data =>{
-    // console.log(data);
-    const id=data.slip.id;
-    let adviceText=data.slip.advice;
-    advicePara.textContent=adviceText;
-    adviceId.textContent=id;
-  })
-  .catch(err =>{
-    bodyy.style.backgroundColor="white";
-    main.classList.toggle('hidden');
-    footer.classList.toggle('hidden');
-    ErrorFunc(`Something went wrong 🥲🥲🥲 (${err.message}).Try Again!`);
-  });
-}
+// const adviceFunc=function(){
+//   fetch('https://api.adviceslip.com/advice')
+//   .then(response => {
+//     if(!response.ok)
+//       throw new Error(`advice not found(${response.status})`);
+//     return response.json();
+//   })
+//   .then(data =>{
+//     // console.log(data);
+//     const id=data.slip.id;
+//     let adviceText=data.slip.advice;
+//     advicePara.textContent=adviceText;
+//     adviceId.textContent=id;
+//   })
+//   .catch(err =>{
+//     bodyy.style.backgroundColor="white";
+//     main.classList.toggle('hidden');
+//     footer.classList.toggle('hidden');
+//     ErrorFunc(`Something went wrong 🥲🥲🥲 (${err.message}).Try Again!`);
+//   });
+// }
 
+const adviceFunc=async function(){
+  const adv = await fetch('https://api.adviceslip.com/advice');
+}
 
 Btn.addEventListener('click',adviceFunc);
 window.addEventListener('load',adviceFunc);
