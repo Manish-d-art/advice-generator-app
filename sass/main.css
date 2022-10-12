@@ -59,7 +59,7 @@ body .main .main__diceContainer {
 }
 @media (min-width: 992px) {
   body .main .main__diceContainer:hover {
-    box-shadow: 0px 0px 20px 10px hsla(150deg, 100%, 66%, 0.4);
+    box-shadow: 0px 0px 20px 10px hsla(150deg, 100%, 66%, 0.4) !important;
   }
 }
 body .main .main__diceContainer .dice {
