@@ -11,6 +11,9 @@ const ErrorFunc=function (msg){
   errorContainer.insertAdjacentText('beforeend',msg);
 };
 
+
+//promise
+
 // const adviceFunc=function(){
 //   fetch('https://api.adviceslip.com/advice')
 //   .then(response => {
@@ -33,19 +36,22 @@ const ErrorFunc=function (msg){
 //   });
 // }
 
-const adviceFunc=async function(){
+
+//async/await
+const adviceFunc = async function(){
   try{
     const adv = await fetch('https://api.adviceslip.com/advice');
+    
     if(!adv.ok) 
       throw new error(`advice not found(${response.status})`)
   
     const advData = await adv.json();
     const id = advData.slip.id;
-    const adviceText=advData.slip.advice;
-    advicePara.textContent=adviceText;
-    adviceId.textContent=id;
+    const adviceText = advData.slip.advice;
+    advicePara.textContent = adviceText;
+    adviceId.textContent = id;
   }catch(error){
-    bodyy.style.backgroundColor="white";
+    bodyy.style.backgroundColor = "white";
     main.classList.toggle('hidden');
     footer.classList.toggle('hidden');
     ErrorFunc(`Something went wrong 🥲🥲🥲 (${error.message}).Try Again!`);
@@ -53,5 +59,5 @@ const adviceFunc=async function(){
  
 }
 
-Btn.addEventListener('click',adviceFunc);
-window.addEventListener('load',adviceFunc);
+Btn.addEventListener('click', adviceFunc);
+window.addEventListener('load', adviceFunc);
