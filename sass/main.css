@@ -72,6 +72,9 @@ body .main .main__diceContainer {
     box-shadow: 0px 0px 20px 10px hsla(150deg, 100%, 66%, 0.4) !important;
   }
 }
+body .main .main__diceContainer:active {
+  box-shadow: 0px 0px 20px 10px hsla(150deg, 100%, 66%, 0.4) !important;
+}
 body .main .main__diceContainer .dice {
   width: 22px;
 }
